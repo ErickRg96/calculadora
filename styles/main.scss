@@ -11,3 +11,143 @@ body {
     font-family: $primary-font;
     overflow: hidden;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 50%;
+    max-width: 350px;
+    margin: 30px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $color-platinum;
+    border-radius: 20px;
+    margin: 0 15px;
+    padding: 30px 0;
+    max-width: 800px;
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 1.1em;
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-grey;
+        text-align: center;
+        margin-top: 10px;
+        min-width: 60%;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 25px 0 60px;
+    }
+
+    &__group-input {
+        display: flex;
+        align-items: center;
+        margin: 10px 15px 0;
+
+        &:nth-child(4) {
+            margin: 10px 0 0;
+        }
+    }
+
+    &__radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        padding: 4px;
+        background-clip: content-box;
+        border: 1px solid $color-green;
+        background-color: $color-white;
+        border-radius: 50%;
+
+        &:checked {
+            background-color: $color-green;
+        }
+    }
+
+    &__label {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-dark;
+    }
+
+    &__input-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: $color-dark;
+        width: calc(100% - 30px);
+    }
+
+    &__input {
+        height: 40px;
+        width: calc(100% - 30px);
+        margin-top: 5px;
+        margin-bottom: 60px;
+        border: 1px solid $color-grey;
+        border-radius: 10px;
+        padding: 0 15px;
+        font-family: $primary-font;
+        font-weight: 400;
+    }
+
+    &__btn-submit {
+        //margin-bottom: 30px;
+    }
+}
+
+// Modal
+.overlay {
+    background: rgba($color-green, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    border: 3px solid red;
+}
+
+.modal {
+    z-index: 1000;
+    transform: translateX(-3000px);
+    max-height: 90vh;
+    color: white;
+    margin: auto;
+    background-color: $color-background;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

@@ -8,8 +8,101 @@
     </head>
     <body>
         <div class="container">
-            <main></main>
+            <main class="content">
+                <img src="./images/Logo.png" alt="Calculadora" class="logo" />
+
+                <section class="form">
+                    <h1 class="form__title">Formulario de cálculo</h1>
+
+                    <p class="form__description">
+                        Selecciona una opción para realizar una operación
+                    </p>
+
+                    <form class="form__inputs" id="form">
+                        <div class="form__group">
+                            <div class="form__group-input">
+                                <input
+                                    type="radio"
+                                    name="operation"
+                                    id="factorial"
+                                    value="factorial"
+                                    class="form__radio"
+                                />
+                                <label for="factorial" class="form__label"
+                                    >Factorial</label
+                                >
+                            </div>
+
+                            <div class="form__group-input">
+                                <input
+                                    type="radio"
+                                    name="operation"
+                                    id="sumatoria"
+                                    value="sumatoria"
+                                    class="form__radio"
+                                />
+                                <label for="sumatoria" class="form__label"
+                                    >Sumatoria</label
+                                >
+                            </div>
+
+                            <div class="form__group-input">
+                                <input
+                                    type="radio"
+                                    name="operation"
+                                    id="fibonacci"
+                                    value="fibonacci"
+                                    class="form__radio"
+                                />
+                                <label for="fibonacci" class="form__label"
+                                    >Serie de Fibonacci</label
+                                >
+                            </div>
+
+                            <div class="form__group-input">
+                                <input
+                                    type="radio"
+                                    name="operation"
+                                    id="aleatorio"
+                                    value="aleatorio"
+                                    class="form__radio"
+                                />
+                                <label for="aleatorio" class="form__label"
+                                    >Aleatorio</label
+                                >
+                            </div>
+                        </div>
+
+                        <p class="form__input-title">Número a calcular</p>
+                        <input
+                            class="form__input"
+                            type="text"
+                            placeholder="ej. 56"
+                        />
+
+                        <input
+                            type="submit"
+                            value="Iniciar cálculo"
+                            class="form__btn-submit"
+                        />
+                    </form>
+                </section>
+            </main>
         </div>
+
+        <div class="overlay" id="overlay"></div>
+
+        <section class="modal" id="modal">
+            <div class="card-result">
+                <h4 class="card-result__title">Resultado del cálculo</h4>
+                <p class="card-result__operation">FACTORIAL DE 8</p>
+
+                <p class="card-result__result">40,080</p>
+
+                <button class="btn--try-again">Hacer cálculo nuevo</button>
+                <button class="btn--close">Cerrar</button>
+            </div>
+        </section>
 
         <script src="./src/index.js"></script>
     </body>
