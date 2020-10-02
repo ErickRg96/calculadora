@@ -27,6 +27,7 @@
                                     id="factorial"
                                     value="factorial"
                                     class="form__radio"
+                                    checked
                                 />
                                 <label for="factorial" class="form__label"
                                     >Factorial</label
@@ -75,8 +76,9 @@
 
                         <p class="form__input-title">Número a calcular</p>
                         <input
-                            class="form__input"
                             type="text"
+                            name="number"
+                            class="form__input"
                             placeholder="ej. 56"
                         />
 
@@ -95,7 +97,7 @@
         <section class="modal" id="modal">
             <div class="card-result">
                 <h4 class="card-result__title">Resultado del cálculo</h4>
-                <p class="card-result__operation">FACTORIAL DE 8</p>
+                <p class="card-result__operation">Factorial de 8</p>
 
                 <p class="card-result__result">40,080</p>
 
