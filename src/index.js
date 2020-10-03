@@ -5,6 +5,8 @@ const overlay = document.getElementById("overlay");
 const modal = document.getElementById("modal");
 const datailsOperation = document.getElementById("card-result__operation");
 const resultOperation = document.getElementById("card-result__result");
+const btnClose = document.getElementById("btn--close");
+const btnAgain = document.getElementById("btn--try-again");
 
 const validateNumber = (number, error) => {
     if (number === "") {
@@ -68,4 +70,17 @@ form.addEventListener("submit", (e) => {
 
     datailsOperation.textContent = `${operation} de ${number}`;
     resultOperation.textContent = `${result}`;
+});
+
+btnClose.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    modal.classList.remove("active");
+});
+
+btnAgain.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    modal.classList.remove("active");
+
+    let number = form.number;
+    number.value = "";
 });

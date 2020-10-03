@@ -13,22 +13,22 @@
 
 .btn {
     @extend %btn;
+}
 
-    &--submit {
-        background-color: $color-green;
-        color: $color-champagne;
-        width: 332px;
-    }
+.btn--submit {
+    background-color: $color-green;
+    color: $color-champagne;
+    width: 332px;
+}
 
-    &--try-again {
-        background-color: $color-champagne;
-        color: $color-green;
-        width: 332px;
-    }
+.btn--try-again {
+    background-color: $color-champagne;
+    color: $color-green;
+    width: 332px;
+}
 
-    &--close {
-        background-color: $color-platinum;
-        color: $color-dark;
-        width: 332px;
-    }
+.btn--close {
+    background-color: $color-platinum;
+    color: $color-dark;
+    width: 332px;
 }

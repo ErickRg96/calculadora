@@ -218,8 +218,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: 3s all ease-in;
-  transition: 3s all ease-in;
+  -webkit-transition: 3s display ease-in;
+  transition: 3s display ease-in;
 }
 
 .active {

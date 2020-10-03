@@ -130,7 +130,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    // display: flex;
     display: none;
     opacity: 0;
 }
@@ -147,7 +146,7 @@ body {
     opacity: 0;
     align-items: center;
     justify-content: center;
-    transition: 3s all ease-in;
+    transition: 3s display ease-in;
 }
 
 .active {
