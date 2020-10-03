@@ -85,7 +85,7 @@
                         <input
                             type="submit"
                             value="Iniciar cálculo"
-                            class="form__btn-submit"
+                            class="btn--submit"
                         />
                     </form>
                 </section>
@@ -97,15 +97,18 @@
         <section class="modal" id="modal">
             <div class="card-result">
                 <h4 class="card-result__title">Resultado del cálculo</h4>
-                <p class="card-result__operation">Factorial de 8</p>
+                <p
+                    class="card-result__operation"
+                    id="card-result__operation"
+                ></p>
 
-                <p class="card-result__result">40,080</p>
+                <p class="card-result__result" id="card-result__result"></p>
 
                 <button class="btn--try-again">Hacer cálculo nuevo</button>
                 <button class="btn--close">Cerrar</button>
             </div>
         </section>
 
-        <script src="./src/index.js"></script>
+        <script type="module" src="./src/index.js"></script>
     </body>
 </html>

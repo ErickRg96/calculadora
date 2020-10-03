@@ -1,6 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap");
 /*   Typography   */
 /*   Colors   */
+/*   Buttons   */
+.btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.btn--submit {
+  background-color: #479295;
+  color: #eccea2;
+  width: 332px;
+}
+
+.btn--try-again {
+  background-color: #eccea2;
+  color: #479295;
+  width: 332px;
+}
+
+.btn--close {
+  background-color: #e4e4e4;
+  color: #0b1717;
+  width: 332px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +80,7 @@ body {
           align-items: center;
   border: 1px solid #e4e4e4;
   border-radius: 20px;
+  margin: 0 15px;
   padding: 30px;
   max-width: 800px;
 }
@@ -103,14 +134,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px 15px 0;
-}
-
-.form__group-input:nth-child(1) {
-  margin-right: 0;
-}
-
-.form__group-input:nth-child(4) {
-  margin-left: 0;
 }
 
 .form__radio {
@@ -176,11 +199,10 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  opacity: 0;
 }
 
 .modal {
-  -webkit-transform: translateX(-3000px);
-          transform: translateX(-3000px);
   max-height: 100vh;
   position: fixed;
   z-index: 1000;
@@ -188,15 +210,23 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  opacity: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 3s all ease-in;
+  transition: 3s all ease-in;
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
 }
 
 .card-result {

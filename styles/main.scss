@@ -1,4 +1,5 @@
 @import "./lib/variables";
+@import "./base/buttons";
 
 * {
     margin: 0;
@@ -32,7 +33,7 @@ body {
     align-items: center;
     border: 1px solid $color-platinum;
     border-radius: 20px;
-    //margin: 0 30px;
+    margin: 0 15px;
     padding: 30px;
     max-width: 800px;
 
@@ -69,14 +70,6 @@ body {
         display: flex;
         align-items: center;
         margin: 10px 15px 0;
-
-        &:nth-child(1) {
-            margin-right: 0;
-        }
-
-        &:nth-child(4) {
-            margin-left: 0;
-        }
     }
 
     &__radio {
@@ -124,10 +117,6 @@ body {
         font-family: $primary-font;
         font-weight: 400;
     }
-
-    &__btn-submit {
-        //margin-bottom: 30px;
-    }
 }
 
 // Modal
@@ -143,10 +132,10 @@ body {
     justify-content: center;
     // display: flex;
     display: none;
+    opacity: 0;
 }
 
 .modal {
-    transform: translateX(-3000px);
     max-height: 100vh;
     position: fixed;
     z-index: 1000;
@@ -154,9 +143,16 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
+    display: none;
+    opacity: 0;
     align-items: center;
     justify-content: center;
+    transition: 3s all ease-in;
+}
+
+.active {
+    display: flex;
+    opacity: 1;
 }
 
 .card-result {
