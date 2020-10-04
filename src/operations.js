@@ -50,19 +50,16 @@ export const aleatorio = (number) => {
 
     switch (option) {
         case 1:
-            // console.log("factorial");
             result = factorial(number);
             operation = "factorial";
             break;
 
         case 2:
-            // console.log("sumatoria");
             result = sumatoria(number);
             operation = "sumatoria";
             break;
 
         case 3:
-            // console.log("fibonacci");
             result = fibonacci(number);
             operation = "fibonacci";
             break;

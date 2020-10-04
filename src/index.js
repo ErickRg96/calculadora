@@ -6,6 +6,7 @@ const modal = document.getElementById("modal");
 const datailsOperation = document.getElementById("card-result__operation");
 const resultOperation = document.getElementById("card-result__result");
 const btnClose = document.getElementById("btn--close");
+const iconClose = document.getElementById("card-result__close");
 const btnAgain = document.getElementById("btn--try-again");
 
 const validateNumber = (number, error) => {
@@ -37,25 +38,20 @@ form.addEventListener("submit", (e) => {
     switch (operation) {
         case "factorial":
             result = factorial(number);
-            // console.log(result);
             break;
 
         case "sumatoria":
             result = sumatoria(number);
-            // console.log(result);
             break;
 
         case "fibonacci":
             result = fibonacci(number);
-            // console.log(result);
             break;
 
         case "aleatorio":
             let resultRandom = aleatorio(number);
-            // console.log("aleatorio");
             result = resultRandom[0];
             operation = resultRandom[1];
-            //console.log(result, operation);
             break;
 
         default:
@@ -77,10 +73,13 @@ btnClose.addEventListener("click", () => {
     modal.classList.remove("active");
 });
 
+iconClose.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    modal.classList.remove("active");
+});
+
 btnAgain.addEventListener("click", () => {
     overlay.classList.remove("active");
     modal.classList.remove("active");
-
-    let number = form.number;
-    number.value = "";
+    form.reset();
 });

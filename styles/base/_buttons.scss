@@ -9,6 +9,12 @@
     border-radius: 10px;
     cursor: pointer;
     height: 40px;
+    min-width: 230px;
+    max-width: 332px;
+
+    @include respond-to(300px) {
+        min-width: 270px;
+    }
 }
 
 .btn {
@@ -18,17 +24,31 @@
 .btn--submit {
     background-color: $color-green;
     color: $color-champagne;
-    width: 332px;
+
+    @include respond-to(768px) {
+        min-width: 140px;
+    }
 }
 
 .btn--try-again {
     background-color: $color-champagne;
     color: $color-green;
-    width: 332px;
+
+    @include respond-to(768px) {
+        min-width: 190px;
+    }
 }
 
 .btn--close {
     background-color: $color-platinum;
     color: $color-dark;
-    width: 332px;
+    margin-top: 15px;
+
+    @include respond-to(768px) {
+        min-width: 190px;
+    }
+
+    @include respond-to(1020px) {
+        display: none;
+    }
 }

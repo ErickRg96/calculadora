@@ -1,0 +1,15 @@
+/*   Mixins   */
+
+// Mixin para centrar y añadir ancho máximo a un elemento
+@mixin max-width($maxwidth: $page-max-width) {
+    max-width: $maxwidth;
+    width: 90%;
+    margin: 0 auto;
+}
+
+//Mixin para breakpoints
+@mixin respond-to($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
