@@ -58,8 +58,6 @@ form.addEventListener("submit", (e) => {
             break;
     }
 
-    console.log(`El resultado de la operacion ${operation} es: ${result}`);
-
     // Modal
     overlay.classList.add("active");
     modal.classList.add("active");
